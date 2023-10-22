@@ -1,15 +1,15 @@
 import { StyleSheet } from "react-native";
 const styles = StyleSheet.create({
     menuBar: {
-        marginTop: 20,
+      marginTop: 20,
        // justifyContent: "flex-start",
       alignItems: 'flex-start',
       justifyContent: 'flex-start',
       backgroundColor: '#f0f0f0',
       padding: 10,
-      width: '100%'
     },
     menu: {
+      flexDirection: 'row',
       backgroundColor: 'white',
       padding: 10,
     },
@@ -17,6 +17,13 @@ const styles = StyleSheet.create({
       padding: 10,
       borderBottomWidth: 1,
       borderBottomColor: '#ccc',
+      alignItems: 'center',
+      justifyContent: 'center'
+    },
+    Item_menu: {
+      padding: 10,
+      alignItems: 'center',
+      justifyContent: 'center'
     },
   });
 

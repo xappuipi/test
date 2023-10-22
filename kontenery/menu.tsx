@@ -11,27 +11,37 @@ const MenuBar = () => {
     };
 
     return (
-        <View>
+        <View style={styles.menuBar}>
             {menuOpen && (
                 <View style={styles.menu}>
                     <FlatList
                         data={menuItems}
                         keyExtractor={(item, index) => index.toString()}
                         renderItem={({ item }) => (
-                            <TouchableOpacity style={styles.menuItem}>
-                            <Text>{item}</Text>
-                          </TouchableOpacity>
+                            <View>
+                                <TouchableOpacity style={styles.menuItem}>
+                                    <Text>{item}</Text>
+                                </TouchableOpacity>
+                            </View>
+                          
                         )}
-                        windowSize={5}
+                    
                     />
+                    <View>
+                        <TouchableOpacity style={styles.Item_menu} onPress={handleMenuClick}>
+                            <Text>Menu</Text>
+                        </TouchableOpacity>
+                    </View>                    
                 </View>
             )}
-                <View style = {styles.menuBar}>
+
+                    {!menuOpen && (
+                    <View>
                     <TouchableOpacity onPress={handleMenuClick}>
                         <Text>Menu</Text>
                     </TouchableOpacity>
-                </View>
-
+                    </View>
+                    )}
         </View>
     );
 };
