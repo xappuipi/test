@@ -7,15 +7,17 @@ import { useEffect, useState } from 'react';
 import { lambda } from './cokolwiek';
 import MenuBar from './kontenery/menu';
 import menus from './styles/menus';
+import AppNavigation from './appnavigator';
 
 export default function App() {
   const [jakis_int, setJakis_int] = useState(0);
 
 
   return (
+
     <View style={container.container}>
       <View style={container.top}>
-        <MenuBar/>
+        <MenuBar />
       </View>
 
       <View  style={container.center}>
@@ -31,5 +33,4 @@ export default function App() {
     </View>
   );
 }
-
 
